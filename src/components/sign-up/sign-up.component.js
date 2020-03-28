@@ -31,7 +31,7 @@ handleSubmit =async event =>{
 
     try{
          const {user} =await auth.createUserWithEmailAndPassword(email,password);
-         CreateUserProfileDocument(user,{displayName});
+       await  CreateUserProfileDocument(user,{displayName});
 
          this.setState({
             displayName:'',
